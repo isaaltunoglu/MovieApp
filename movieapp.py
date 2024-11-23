@@ -11,7 +11,7 @@ class MovieOperators():
         response =  requests.get(tm_url,headers=headers).text
         soup = BeautifulSoup(response, "html.parser")
         print("Welcome For Top 250 Movies!")
-        limit = int(input("How many movies do you want ?"))
+        limit = int(input("How many movies do you want ? "))
         print("----"*7)
         movie_List = soup.find("ul",{"class":"ipc-metadata-list"}).find_all("li",limit=limit)
         for movie in movie_List:
@@ -24,7 +24,7 @@ class MovieOperators():
         response =  requests.get(tm_url,headers=headers).text
         soup = BeautifulSoup(response, "html.parser")
         print("Welcome For Top 250 series!")
-        limit = int(input("How many series do you want ?"))
+        limit = int(input("How many series do you want ? "))
         print("----"*7)
         movie_List = soup.find("ul",{"class":"ipc-metadata-list"}).find_all("li",limit=limit)
         for movie in movie_List:
@@ -37,10 +37,10 @@ opm = MovieOperators()
 #loop for user to interaction with app
 while True:
     print("What do you want to do ? ")
-    print("1-Top Movies\n2-Top Series\n4- -1 for exite")
+    print("1-Top Movies\n2-Top Series\n3-for exite")
     
     choice = str(input("Enter your choice: "))
-    if choice == "-1":
+    if choice == "3":
         break
     else:
         if choice == "1":
@@ -52,6 +52,5 @@ while True:
             #Url ile Top Seriesleri al
         else:
             print("Invalid choice. Please try again.")
-
 
 
