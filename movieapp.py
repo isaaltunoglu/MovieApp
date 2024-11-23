@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
+headers = {"User-Agent": 
+"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0"}
 
 
 while True:
@@ -15,7 +16,7 @@ while True:
     else:
         if choice == "1":
             tm_url = "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
-            
+
             #Url ile Top Movieleri al
         elif choice == "2":
             pass
